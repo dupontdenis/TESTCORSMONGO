@@ -3,13 +3,16 @@ import { fetchItems } from "./fetchItems.mjs";
 
 export async function createItem() {
   const names = [
-    "Apple",
-    "Banana",
-    "Cherry",
-    "Date",
-    "Elderberry",
-    "Fig",
-    "Grape",
+    "Margherita",
+    "Pepperoni",
+    "Quattro Formaggi",
+    "Napolitana",
+    "Calzone",
+    "Diavola",
+    "Capricciosa",
+    "Marinara",
+    "Funghi",
+    "Prosciutto",
   ];
   const randomName =
     names[Math.floor(Math.random() * names.length)] + " " + Date.now();

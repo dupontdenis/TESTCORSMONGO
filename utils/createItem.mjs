@@ -22,7 +22,7 @@ export async function createItem() {
     });
     const data = await res.json();
 
-    alert(`Created: ${data.name}`);
+    // alert(`Created: ${data.name}`);
     fetchItems();
   } catch (err) {
     const needsBackend = (err?.message || "")

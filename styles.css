@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 10px 5px;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* Danger variant for destructive actions */
+button.danger {
+  background: #e74c3c;
+}
+
+button.danger:hover {
+  background: #c0392b;
+}
+
+#items {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ecf0f1;
+  border-radius: 4px;
+}
+
+.item {
+  padding: 10px;
+  margin: 5px 0;
+  background: white;
+  border-radius: 4px;
+  border-left: 4px solid #3498db;
+}
+
+.error {
+  color: #e74c3c;
+  padding: 10px;
+  background: #fadbd8;
+  border-radius: 4px;
+}

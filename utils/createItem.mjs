@@ -25,6 +25,12 @@ export async function createItem() {
     alert(`Created: ${data.name}`);
     fetchItems();
   } catch (err) {
-    alert(`Error: ${err.message}`);
+    const needsBackend = (err?.message || "")
+      .toLowerCase()
+      .includes("failed to fetch");
+    const hint = needsBackend
+      ? "\nDon’t forget to run https://github.com/dupontdenis/testMongo.git"
+      : "";
+    alert(`Error: ${err.message}${hint}`);
   }
 }

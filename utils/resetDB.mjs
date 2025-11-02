@@ -33,6 +33,12 @@ export async function resetDB() {
     alert(`Database reset successful. Deleted ${deleted} item(s).`);
     fetchItems();
   } catch (err) {
-    alert(`Reset failed: ${err.message}`);
+    const needsBackend = (err?.message || "")
+      .toLowerCase()
+      .includes("failed to fetch");
+    const hint = needsBackend
+      ? "\nDon’t forget to run https://github.com/dupontdenis/testMongo.git"
+      : "";
+    alert(`Reset failed: ${err.message}${hint}`);
   }
 }

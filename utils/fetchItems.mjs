@@ -34,6 +34,12 @@ export async function fetchItems() {
         )
         .join("");
   } catch (err) {
-    container.innerHTML = `<p class="error">Error: ${err.message}</p>`;
+    const needsBackend = (err?.message || "")
+      .toLowerCase()
+      .includes("failed to fetch");
+    const hint = needsBackend
+      ? " — don’t forget to run https://github.com/dupontdenis/testMongo.git"
+      : "";
+    container.innerHTML = `<p class="error">Error: ${err.message}${hint}</p>`;
   }
 }

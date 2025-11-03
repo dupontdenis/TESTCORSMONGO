@@ -45,7 +45,17 @@ export const API_URL = "http://localhost:3000"; // adjust if your backend runs e
 
 Serve these static files with any simple server. Examples:
 
+- Using Live Server
+``` html
+Open with Live Server extension
+```
+
 - Using Node (npx):
+
+```bash
+npx http-server -p 3000
+```
+ou 
 
 ```bash
 npx serve .
